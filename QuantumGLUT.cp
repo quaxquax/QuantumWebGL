@@ -253,9 +253,11 @@ int main(int argc, char **argv)
 #endif
 
 	string descriptionFile;
+	descriptionFile = "example.qgl";
 	if(argc == 2)
 		descriptionFile = argv[1];
-	else if(argc == 1)
+	// Commented out for WebGl prepping
+	/* else if(argc == 1)
 	{
 		cout << "Enter .qgl file to read: " << flush;
 		char buffer[4096];
@@ -267,7 +269,7 @@ int main(int argc, char **argv)
 		cerr << "Usage: " << argv[0] << " [filename.qgl]\n";
 		return 1;
 	}
-
+	*/
 	cout << "Initializing OpenGL...\n";
 
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
